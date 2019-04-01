@@ -1,0 +1,4 @@
+3
+permutation noittaperum
+permutation notapermuta
+permutation noop
