@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// O(n)
 bool solve(string str) {
     // Remove white space and to lowercase
     str.erase(str.find(' '), 1);
