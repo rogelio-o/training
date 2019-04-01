@@ -27,6 +27,7 @@ void addAmountToCharacterInMap(map<char, int> &characters, string str, int amoun
     }
 }
 
+// O(n)
 bool solve(string strA, string strB) {
     if(strA.size() != strB.size()) {
         return false;
