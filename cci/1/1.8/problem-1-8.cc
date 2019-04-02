@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// O(mn)
 void solve(int m, int n, int **matrix) {
     vector<pair<int,int>> zeros;
     for(int i = 0; i < m; i++) {
