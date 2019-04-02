@@ -1,10 +1,10 @@
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
-#include <sstream>
 
 using namespace std;
 
+// O(n^2)
 void solve(int n, int **arr) {
     for(int layer = 0; layer < n / 2; layer++) {
         int start = layer;
