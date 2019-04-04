@@ -6,18 +6,19 @@
 
 using namespace std;
 
-BinarySearchTreeNode * solve(int start, int end, int *array, int index) {
-    BinarySearchTreeNode * root = new BinarySearchTreeNode(array[index]);
-    int leftIndex = start + (index - start) / 2;
-    int rightIndex = index + (end - index) / 2;
-
-    if(leftIndex != index) {
-        root->left = solve(start, index - 1, array, leftIndex);
+BinarySearchTreeNode * solve(int start, int end, int *array) {
+    int size = end - start;
+    if(size < 0) {
+        return  NULL;
+    } else if(size == 0) {
+        return new BinarySearchTreeNode(array[start]);
     }
 
-    if(rightIndex != index) {
-        root->right = solve(index + 1, end, array, rightIndex);
-    }
+    int middle = start + floor(size / 2);
+    BinarySearchTreeNode * root = new BinarySearchTreeNode(array[middle]);
+
+    root->left = solve(start, middle - 1, array);
+    root->right = solve(middle + 1, end, array);
 
     return root;
 }
@@ -26,7 +27,7 @@ BinarySearchTreeNode * solve(int n, int *array) {
     BinarySearchTreeNode * root = new BinarySearchTreeNode(10);
     root->left = new BinarySearchTreeNode(5);
 
-    return solve(0, n - 1, array, ceil(n / 2) - 1);
+    return solve(0, n - 1, array);
 }
 
 int main()
