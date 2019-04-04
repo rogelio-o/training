@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-#include "../utils/binary-search-tree-node.h"
+#include "../../utils/binary-search-tree-node.h"
 
 using namespace std;
 
