@@ -12,12 +12,14 @@ BinarySearchTreeNode::BinarySearchTreeNode(int v) {
 void BinarySearchTreeNode::insert(BinarySearchTreeNode *node) {
     if(node->value > value) {
         if(right == NULL) {
+            node->parent = this;
             right = node;
         } else {
             right->insert(node);
         }
     } else {
         if(left == NULL) {
+            node->parent = this;
             left = node;
         } else {
             left->insert(node);

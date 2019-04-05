@@ -9,6 +9,7 @@ public:
     BinarySearchTreeNode(int value);
     BinarySearchTreeNode *left;
     BinarySearchTreeNode *right;
+    BinarySearchTreeNode *parent;
     int value;
     void insert(BinarySearchTreeNode *node);
     std::string toString();
